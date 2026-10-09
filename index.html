@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnlyMens - Premium Fashion</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body { margin:0; font-family:Arial,sans-serif; }
+        header { background:#111; color:#fff; padding:15px; text-align:center; }
+        nav { background:#222; display:flex; justify-content:center; }
+        nav a { color:#fff; padding:14px 20px; text-decoration:none; }
+        nav a:hover { background:#444; }
+
+        iframe{
+            width:100%;
+            height:900px;
+            border:none;
+        }
+
+        footer{
+            background:#111;
+            color:#fff;
+            text-align:center;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>OnlyMens</h1>
+        <p>Premium Men's Fashion Store</p>
+    </div>
+
+</header>
+
+<nav>
+<nav>
+    <a href="home.html" target="contentFrame">Home</a>
+    <div class="dropdown">
+    <button class="dropbtn">Products ▼</button>
+
+    <div class="dropdown-content">
+        <a href="shirts.html" target="contentFrame">Shirts</a>
+        <a href="jeans.html" target="contentFrame">Jeans</a>
+        <a href="jackets.html" target="contentFrame">Jackets</a>
+        <a href="trousers.html" target="contentFrame">Trousers</a>
+        <a href="tshirts.html" target="contentFrame">T-Shirts</a>
+    </div>
+</div>
+    <a href="contact.html" target="contentFrame">Contact</a>
+    <a href="login.html" target="contentFrame">Login</a>
+    <a href="signup.html" target="contentFrame">Sign Up</a>
+    <a href="cart.html" target="contentFrame">Cart 🛒</a>
+</nav>
+</nav>
+
+<iframe name="contentFrame" src="home.html"></iframe>
+
+<footer>
+    <p>&copy; 2026 OnlyMens. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

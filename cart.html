@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="cart-container">
+
+    <h2>Shopping Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+        <h3>Total: ₹<span id="total">0</span></h3>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+
+</div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cartHTML = "";
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+    total += item.price;
+
+    cartHTML += `
+    <div class="cart-item">
+
+        <img src="${item.image}" width="90">
+
+        <div>
+            <h3>${item.name}</h3>
+            <p>₹${item.price}</p>
+        </div>
+
+        <button onclick="removeItem(${index})">Remove</button>
+
+    </div>
+    `;
+});
+
+document.getElementById("cartItems").innerHTML = cartHTML;
+document.getElementById("total").innerHTML = total;
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+    location.reload();
+
+}
+
+</script>
+
+</body>
+</html>
